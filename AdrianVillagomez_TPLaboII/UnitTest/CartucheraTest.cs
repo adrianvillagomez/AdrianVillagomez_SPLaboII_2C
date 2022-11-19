@@ -1,4 +1,5 @@
 using Entidades;
+using Entidades.Excepciones;
 
 namespace UnitTest
 {
@@ -47,15 +48,13 @@ namespace UnitTest
             Assert.IsTrue(Esperado);
         }
         [TestMethod]
+        [ExpectedException(typeof(CartucheraLlenaException))]
         public void SobrecargaOperadorMas_DeberiaRetornarFalseSiNoPudoAgregarConExito()
         {
             Cartuchera<Utiles> cartuchera = new Cartuchera<Utiles>(3, utiles);
             Goma goma= new("Faber", 100);
 
-            bool Esperado = cartuchera + goma;
-
-            Assert.IsFalse(Esperado);
-        }
-
+            bool Esperado = cartuchera + goma; 
+        }       
     }
 }
