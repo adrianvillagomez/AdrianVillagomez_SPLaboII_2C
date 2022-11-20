@@ -15,5 +15,7 @@ namespace Entidades
         }
 
         public string Material { get => material; set => material = value; }
+
+       
     }
 }
