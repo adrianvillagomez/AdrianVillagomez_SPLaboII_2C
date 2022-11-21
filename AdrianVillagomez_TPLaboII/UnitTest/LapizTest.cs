@@ -14,7 +14,7 @@ namespace UnitTest
         {
             Lapiz lapiz = new Lapiz("marca", 200, Color.Rojo);
            
-            lapiz.SerializarXml($"{lapiz.Marca}");
+            lapiz.SerializarXml("pepito");
          
             bool existe = File.Exists($"{Lapiz.ruta}\\pepito.xml");
 
@@ -26,7 +26,7 @@ namespace UnitTest
         {
             Lapiz lapiz2 = new Lapiz("marca", 500, Color.Verde);
 
-            Lapiz lapiz = lapiz2.Xml("pepito.xml");
+            Lapiz lapiz = lapiz2.Xml($"{Lapiz.ruta}\\pepito.xml");
 
             Console.WriteLine($"{lapiz.Marca} {lapiz.Precio} {lapiz.Color}");
             Assert.IsNotNull(lapiz);
@@ -46,8 +46,7 @@ namespace UnitTest
         public void Json_DeberiaDezerializarDeMisDocumentosUnArchivoJson()
         {
             Lapiz lapiz = new Lapiz("marca", 600, Color.Rojo);
-
-            Lapiz lapizDeserializado =lapiz.Json("lapizfaaber.json");
+            Lapiz lapizDeserializado =lapiz.Json($"{Lapiz.ruta}\\lapizFaaber.json");
 
             Console.WriteLine($"{lapiz.Marca} {lapiz.Precio} {lapiz.Color}");
             Assert.IsNotNull(lapizDeserializado);

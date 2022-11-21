@@ -39,11 +39,11 @@ namespace Entidades
         }
         public Color Color { get => color; set => color = value; }
 
-        public Lapiz Json(string nombreArchivo)
+        public Lapiz Json(string ruta)
         {
             try
             {
-                using (StreamReader streamReader = new StreamReader($"{ruta}\\{nombreArchivo}"))
+                using (StreamReader streamReader = new StreamReader(ruta))
                 {
                     string json = streamReader.ReadToEnd();
                     return JsonSerializer.Deserialize<Lapiz>(json);
@@ -59,11 +59,11 @@ namespace Entidades
         /// </summary>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public Lapiz Xml(string nombreArchivo)
+        public Lapiz Xml(string ruta)
         {
             try
             {
-                using (XmlTextReader xmlTextReader = new XmlTextReader($"{ruta}\\{nombreArchivo}"))
+                using (XmlTextReader xmlTextReader = new XmlTextReader(ruta))
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(Lapiz));
                     return serializer.Deserialize(xmlTextReader) as Lapiz;

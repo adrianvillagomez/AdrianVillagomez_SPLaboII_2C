@@ -32,6 +32,15 @@ namespace Entidades
                 return precioTotal;
             }
         }
+
+        public List<T> ListaDeElementos { get => listaDeElementos; set => listaDeElementos = value; }
+        /// <summary>
+        /// Agrega util a mi cartuchera
+        /// </summary>
+        /// <param name="cartuchera"></param>
+        /// <param name="elemento"></param>
+        /// <returns></returns>
+        /// <exception cref="CartucheraLlenaException"></exception>
         public static bool operator +(Cartuchera<T> cartuchera, T elemento)
         {
             if (cartuchera.capacidadCartuchera > cartuchera.listaDeElementos.Count)

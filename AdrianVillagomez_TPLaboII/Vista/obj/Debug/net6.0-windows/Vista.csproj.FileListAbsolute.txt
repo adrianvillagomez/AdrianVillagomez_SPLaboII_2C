@@ -22,3 +22,11 @@ F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.
 F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.FrmAgregarSacaPunta.resources
 F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.FrmAgregarUtil.resources
 F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.csproj.CopyComplete
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.FrmVerUtiles.resources
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.FrmSerializar.resources

@@ -34,6 +34,7 @@
             this.btnAgregarGoma = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnVerUtiles = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAgregarUtil
@@ -94,6 +95,18 @@
             this.btnVerUtiles.TabIndex = 4;
             this.btnVerUtiles.Text = "Ver Utiles";
             this.btnVerUtiles.UseVisualStyleBackColor = false;
+            this.btnVerUtiles.Click += new System.EventHandler(this.btnVerUtiles_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(600, 441);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 43);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Leer Tickets";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmCartuchera
             // 
@@ -102,6 +115,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(772, 549);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnVerUtiles);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregarGoma);
@@ -111,6 +125,7 @@
             this.Name = "FrmCartuchera";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmCartuchera_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,5 +138,6 @@
         private Button btnAgregarGoma;
         private Label label1;
         private Button btnVerUtiles;
+        private Button button1;
     }
 }
