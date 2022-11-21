@@ -49,6 +49,7 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Capacidad de la Cartuchera: {this.capacidadCartuchera}");
+            sb.AppendLine($"Utiles en la cartuchera: {this.listaDeElementos.Count}");
             foreach (T item in listaDeElementos)
             {
                 sb.AppendLine($"Tipo: {item.GetType().Name}");
@@ -66,7 +67,6 @@ namespace Entidades
             }
             return sb.ToString();
         }
-
 
     }
 }

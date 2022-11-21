@@ -12,7 +12,7 @@ namespace UnitTest
         [TestMethod]
         public void Xml_DeberiaSerializarEnFormatoXMLEnMisDocumentos()
         {
-            Lapiz lapiz = new Lapiz("pepito",200,Color.Rojo);
+            Lapiz lapiz = new Lapiz("marca", 200, Color.Rojo);
            
             lapiz.SerializarXml($"{lapiz.Marca}");
          
@@ -24,7 +24,7 @@ namespace UnitTest
         [TestMethod]
         public void Xml_DeberiaDeserializarDeMiArchivoXMLEnMisDocumentos()
         {
-            Lapiz lapiz2 = new Lapiz("Faber", 500, Color.Verde);
+            Lapiz lapiz2 = new Lapiz("marca", 500, Color.Verde);
 
             Lapiz lapiz = lapiz2.Xml("pepito.xml");
 
@@ -35,7 +35,7 @@ namespace UnitTest
         [TestMethod]
         public void Json_DeberiaSerializarEnFormatoJsonEnMisDocumentos()
         {
-            Lapiz lapiz = new Lapiz("Faber", 600, Color.Rojo);
+            Lapiz lapiz = new Lapiz("marca", 600, Color.Rojo);
 
             lapiz.SerializarJson("lapizFaaber");
 
@@ -45,7 +45,7 @@ namespace UnitTest
         [TestMethod]
         public void Json_DeberiaDezerializarDeMisDocumentosUnArchivoJson()
         {
-            Lapiz lapiz = new Lapiz("Faber", 600, Color.Rojo);
+            Lapiz lapiz = new Lapiz("marca", 600, Color.Rojo);
 
             Lapiz lapizDeserializado =lapiz.Json("lapizfaaber.json");
 

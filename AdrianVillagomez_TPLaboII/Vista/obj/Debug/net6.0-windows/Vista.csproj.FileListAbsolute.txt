@@ -16,3 +16,9 @@ F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\refint
 F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.pdb
 F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.genruntimeconfig.cache
 F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\ref\Vista.dll
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\bin\Debug\net6.0-windows\Entidades.dll
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\bin\Debug\net6.0-windows\Entidades.pdb
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.FrmAgregarGoma.resources
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.FrmAgregarSacaPunta.resources
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.FrmAgregarUtil.resources
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.csproj.CopyComplete

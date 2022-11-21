@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Goma : Utiles
     {
-        public Goma(string marca, decimal precio) : base(marca, precio)
+        public Goma(string marca, int precio) : base(marca, precio)
         {
         }
     }

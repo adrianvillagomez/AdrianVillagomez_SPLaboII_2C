@@ -15,8 +15,8 @@ namespace UnitTest
         [TestInitialize]
         public void Init()
         {
-            lapiz1 = new("Faber", 100, Color.Verde);
-            sacaPuntas = new("Pepito", 200, "Metal");
+            lapiz1 = new("marca", 100, Color.Verde);
+            sacaPuntas = new("marca", 200, "Metal");
             goma = new("Fz", 300);
             utiles = new List<Utiles>
             {
@@ -41,7 +41,7 @@ namespace UnitTest
         public void SobrecargaOperadorMas_DeberiaRetornarTrueSiPudoAgregarConExito()
         {
             Cartuchera<Utiles> cartuchera= new Cartuchera<Utiles>(4, utiles);
-            Lapiz lapiz4 = new("Faber", 100, Color.Rojo);
+            Lapiz lapiz4 = new( "marca", 100, Color.Rojo);
 
             bool Esperado = cartuchera + lapiz4;
 
@@ -52,7 +52,7 @@ namespace UnitTest
         public void SobrecargaOperadorMas_DeberiaRetornarFalseSiNoPudoAgregarConExito()
         {
             Cartuchera<Utiles> cartuchera = new Cartuchera<Utiles>(3, utiles);
-            Goma goma= new("Faber", 100);
+            Goma goma= new( "Faber", 10);
 
             bool Esperado = cartuchera + goma; 
         }       

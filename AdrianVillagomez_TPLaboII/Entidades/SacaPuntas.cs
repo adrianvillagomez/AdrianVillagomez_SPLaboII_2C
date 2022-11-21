@@ -9,7 +9,7 @@ namespace Entidades
     public class SacaPuntas : Utiles
     {
         private string material;
-        public SacaPuntas(string marca, decimal precio,string material) : base(marca, precio)
+        public SacaPuntas(string marca, int precio, string material) : base(marca, precio)
         {
             this.material = material;
         }

@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="FrmAgregarGoma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAgregarSacaPunta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAgregarUtil.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmCartuchera.cs">
       <SubType>Form</SubType>
     </Compile>

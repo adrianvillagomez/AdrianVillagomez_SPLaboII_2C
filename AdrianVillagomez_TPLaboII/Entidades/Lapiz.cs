@@ -29,7 +29,7 @@ namespace Entidades
             ruta = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         }
 
-        public Lapiz(string marca, decimal precio, Color color) : base(marca, precio)
+        public Lapiz(string marca, int precio, Color color) : base( marca, precio)
         {
             this.color = color;
         }
@@ -116,6 +116,14 @@ namespace Entidades
         public void SerializarJson(string nombreArchivo)
         {
             ((ISerializa)this).Json($"{nombreArchivo}.json");
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(base.ToString());
+            sb.AppendLine($"Color : {this.color}");
+            return sb.ToString();
         }
     }
 }
