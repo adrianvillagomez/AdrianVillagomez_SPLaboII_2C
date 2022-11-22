@@ -31,7 +31,7 @@ namespace Vista
                 {
                     _=cartuchera + sacapuntas;
                     SacaPuntasDAO.Alta(sacapuntas);
-                    this.Close();
+                    MessageBox.Show("Agregado con exito","Exito");
                 }
                 catch (Exception ex)
                 {
@@ -40,8 +40,10 @@ namespace Vista
             }
             else
             {
-                MessageBox.Show("Ingrese un valor numerico");
+                MessageBox.Show("Ingrese un valor numerico","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
             }
+            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

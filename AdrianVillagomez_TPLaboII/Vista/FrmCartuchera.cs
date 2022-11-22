@@ -1,4 +1,5 @@
 using Entidades;
+using Entidades.GestorDeArchivo;
 using Entidades.GestorSQL;
 
 namespace Vista
@@ -9,7 +10,7 @@ namespace Vista
         public FrmCartuchera()
         {
             InitializeComponent();
-            cartuchera = new Cartuchera<Utiles>(7,new List<Utiles>() );
+            cartuchera = new Cartuchera<Utiles>(3,new List<Utiles>() );
         }
 
         private void btnAgregarUtil_Click(object sender, EventArgs e)
@@ -31,10 +32,9 @@ namespace Vista
         }
 
         private void FrmCartuchera_Load(object sender, EventArgs e)
-        {
-           
-
-            cartuchera.ListaDeElementos = LlenarCartuchera();        
+        {          
+            cartuchera.ListaDeElementos = LlenarCartuchera();
+            cartuchera.EventoPrecio += ImprimirEnTicket;
         }
        
       
@@ -63,7 +63,14 @@ namespace Vista
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            cartuchera.ListaDeElementos = LlenarCartuchera();
             MessageBox.Show(cartuchera.ToString(),"Ticket Cartuchera");
+        }
+        public void ImprimirEnTicket()
+        {
+            Log log= new Log();
+            log.Escribir(cartuchera.ToString());
+            MessageBox.Show("Se disparo el evento");
         }
     }
 }

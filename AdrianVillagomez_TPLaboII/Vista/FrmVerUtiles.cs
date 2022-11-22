@@ -86,7 +86,7 @@ namespace Vista
             int.TryParse(precio, out int precioInt);
             lapiz = new Lapiz(marca, precioInt, colorLapiz);
             lapiz.Id = idInt;
-            FrmSerializar frmSerializar = new FrmSerializar(lapiz);
+            FrmSerializar frmSerializar = new FrmSerializar(lapiz, cartuchera);
             frmSerializar.ShowDialog();
             RefrescarDtvUtilesLapiz();
 

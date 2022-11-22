@@ -24,7 +24,7 @@ namespace Entidades.GestorDeArchivo
         {
             try
             {
-                using (StreamWriter streamWriter = new StreamWriter(ruta,true))
+                using (StreamWriter streamWriter = new StreamWriter(ruta))
                 {
                     streamWriter.WriteLine(contenido);
                 }

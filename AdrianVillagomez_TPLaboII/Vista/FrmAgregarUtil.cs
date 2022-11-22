@@ -36,19 +36,32 @@ namespace Vista
             bool resutlado = int.TryParse(txtPrecio.Text, out int val);
             Color color;
             Enum.TryParse<Color>(cmbColor.SelectedValue.ToString(), out color);
-            if (resutlado)
+            if (!string.IsNullOrEmpty(txtMarca.Text))
             {
-                Lapiz lapiz = new Lapiz(txtMarca.Text, val, color);
-                try
+                if (resutlado)
                 {
-                    _ = cartuchera + lapiz;
-                    LapizDAO.Alta(lapiz);
-                    
+                    Lapiz lapiz = new Lapiz(txtMarca.Text, val, color);
+                    try
+                    {
+                        _ = cartuchera + lapiz;
+                        LapizDAO.Alta(lapiz);
+                        MessageBox.Show("Agregado con exito", "Exito");
+                    }
+                    catch (CartucheraLlenaException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (CartucheraLlenaException ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Ingrese un Dato Numerico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un Dato", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             this.Close();
         }

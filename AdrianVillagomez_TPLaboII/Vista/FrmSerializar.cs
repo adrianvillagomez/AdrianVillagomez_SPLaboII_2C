@@ -16,10 +16,12 @@ namespace Vista
     public partial class FrmSerializar : Form
     {
         Lapiz lapiz;
-        public FrmSerializar(Lapiz lapiz)
+        Cartuchera<Utiles> cartuchera;
+        public FrmSerializar(Lapiz lapiz, Cartuchera<Utiles> cartuchera)
         {
             InitializeComponent();
             this.lapiz = lapiz;
+            this.cartuchera = cartuchera;
         }
 
         private void btnSerialziarJson_Click(object sender, EventArgs e)
@@ -56,6 +58,7 @@ namespace Vista
             if (respuesta == DialogResult.OK)
             {
                 LapizDAO.Eliminar(lapiz.Id);
+                cartuchera.ListaDeElementos.Remove(lapiz);
                 this.Close();
             }
 

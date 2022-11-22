@@ -24,6 +24,7 @@ namespace Vista
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+
             bool respuesta = int.TryParse(txtPrecio.Text, out int precio);
             if (respuesta)
             {
@@ -32,12 +33,19 @@ namespace Vista
                 {
                     _=cartuchera + goma;
                     GomaDao.Alta(goma);
+                    MessageBox.Show("Agregado con exito", "Exito");
                 }
                 catch (CartucheraLlenaException ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
