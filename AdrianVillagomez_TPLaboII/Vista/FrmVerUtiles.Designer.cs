@@ -35,6 +35,7 @@
             this.dtvSacapuntaz = new System.Windows.Forms.DataGridView();
             this.dtvGoma = new System.Windows.Forms.DataGridView();
             this.btnDeserializar = new System.Windows.Forms.Button();
+            this.btnDeserializarXml = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvLapices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvSacapuntaz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvGoma)).BeginInit();
@@ -114,11 +115,22 @@
             this.btnDeserializar.UseVisualStyleBackColor = true;
             this.btnDeserializar.Click += new System.EventHandler(this.btnDeserializar_Click);
             // 
+            // btnDeserializarXml
+            // 
+            this.btnDeserializarXml.Location = new System.Drawing.Point(480, 367);
+            this.btnDeserializarXml.Name = "btnDeserializarXml";
+            this.btnDeserializarXml.Size = new System.Drawing.Size(216, 49);
+            this.btnDeserializarXml.TabIndex = 11;
+            this.btnDeserializarXml.Text = "Deserializar Lapiz Xml";
+            this.btnDeserializarXml.UseVisualStyleBackColor = true;
+            this.btnDeserializarXml.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmVerUtiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 482);
+            this.Controls.Add(this.btnDeserializarXml);
             this.Controls.Add(this.btnDeserializar);
             this.Controls.Add(this.dtvGoma);
             this.Controls.Add(this.dtvSacapuntaz);
@@ -146,5 +158,6 @@
         private DataGridView dtvSacapuntaz;
         private DataGridView dtvGoma;
         private Button btnDeserializar;
+        private Button btnDeserializarXml;
     }
 }

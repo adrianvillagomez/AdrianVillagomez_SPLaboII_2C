@@ -65,7 +65,7 @@ namespace Entidades
                 if (item is Lapiz)
                 {
                     Lapiz lapiz = item as Lapiz;
-                    sb.AppendLine($"Color: {lapiz.Color}");
+                    //sb.AppendLine($"Color: {lapiz.Color}");
                 }
                 if (item is SacaPuntas)
                 {

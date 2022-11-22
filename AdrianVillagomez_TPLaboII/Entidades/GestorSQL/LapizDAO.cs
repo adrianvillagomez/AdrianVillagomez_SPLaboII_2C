@@ -81,19 +81,7 @@ namespace Entidades.GestorSQL
                 throw new Exception("Error al dar de baja", ex);
             }
         }
-        public static void Modificar(Lapiz lapiz)
-        {
-            try
-            {
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
+      
         public static List<Utiles> LeerListaLapiz()
         {
             List<Utiles> lapices = new List<Utiles>();

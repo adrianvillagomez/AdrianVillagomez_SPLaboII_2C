@@ -27,6 +27,22 @@ namespace Vista
         private void FrmVerUtiles_Load(object sender, EventArgs e)
         {
             RefrescarDtvUtilesLapiz();
+            RefrescarDtvSacaPuntas();
+            RefrescarDtvUtilesGoma();
+        }
+        public void RefrescarDtvSacaPuntas()
+        {
+            dtvSacapuntaz.DataSource = null;
+            List<SacaPuntas> sacaPuntas = new List<SacaPuntas>();
+            foreach (SacaPuntas item in SacaPuntasDAO.LeerListaSacaPuntas())
+            {
+                if (item is SacaPuntas)
+                {
+                    SacaPuntas sacapunta = item as SacaPuntas;
+                    sacaPuntas.Add(sacapunta);
+                }
+            }
+            dtvSacapuntaz.DataSource = sacaPuntas;
         }
         public void RefrescarDtvUtilesLapiz()
         {
@@ -42,7 +58,20 @@ namespace Vista
             }
             dtvLapices.DataSource = lapices;
         }
-
+        public void RefrescarDtvUtilesGoma()
+        {
+            dtvGoma.DataSource = null;
+            List<Goma> gomas = new List<Goma>();
+            foreach (Goma item in GomaDao.LeerListaDeGomas())
+            {
+                if (item is Goma)
+                {
+                    Goma lapiz = item as Goma;
+                    gomas.Add(lapiz);
+                }
+            }
+            dtvGoma.DataSource = gomas;
+        }
         private void dtvUtiles_DoubleClick(object sender, EventArgs e)
         {
 
@@ -59,6 +88,7 @@ namespace Vista
             lapiz.Id = idInt;
             FrmSerializar frmSerializar = new FrmSerializar(lapiz);
             frmSerializar.ShowDialog();
+            RefrescarDtvUtilesLapiz();
 
         }
 
@@ -66,18 +96,39 @@ namespace Vista
         {
             try
             {
-
-                OpenFileDialog openFile = new OpenFileDialog();
-                openFile.ShowDialog(); 
-                Lapiz lapizDeserializadoJson = lapizDeserializar.Json(openFile.FileName);
-                MessageBox.Show(lapizDeserializadoJson.ToString());
+                OpenFileDialog openFile = new OpenFileDialog();       
+                openFile.Filter = "archivojson|*.json";
+                DialogResult resultado = openFile.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    Lapiz lapizDeserializadoJson = lapizDeserializar.Json(openFile.FileName);
+                    MessageBox.Show(lapizDeserializadoJson.ToString(),"Dezerializacion Json", MessageBoxButtons.OK);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
+
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFile = new OpenFileDialog();
+                openFile.Filter = "archivoxml|*.xml";
+                DialogResult resultado = openFile.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    Lapiz lapizDeserializadoXml = lapizDeserializar.Xml(openFile.FileName);
+                    MessageBox.Show(lapizDeserializadoXml.ToString(),"Dezerializacion XMl",MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

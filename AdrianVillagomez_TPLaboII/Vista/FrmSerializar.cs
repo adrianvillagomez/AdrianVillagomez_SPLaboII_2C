@@ -52,7 +52,14 @@ namespace Vista
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            LapizDAO.Eliminar(lapiz.Id);
+            DialogResult respuesta = MessageBox.Show("Esta Seguro de eliminar el lapiz?", "Cuidado", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (respuesta == DialogResult.OK)
+            {
+                LapizDAO.Eliminar(lapiz.Id);
+                this.Close();
+            }
+
         }
+
     }
 }

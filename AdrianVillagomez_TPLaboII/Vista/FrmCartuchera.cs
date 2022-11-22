@@ -9,7 +9,7 @@ namespace Vista
         public FrmCartuchera()
         {
             InitializeComponent();
-            cartuchera = new Cartuchera<Utiles>(5,new List<Utiles>() );
+            cartuchera = new Cartuchera<Utiles>(7,new List<Utiles>() );
         }
 
         private void btnAgregarUtil_Click(object sender, EventArgs e)
@@ -20,20 +20,21 @@ namespace Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmAgregarSacaPunta sacaPunta = new FrmAgregarSacaPunta();
+            FrmAgregarSacaPunta sacaPunta = new FrmAgregarSacaPunta(cartuchera);
             sacaPunta.ShowDialog();
         }
 
         private void btnAgregarGoma_Click(object sender, EventArgs e)
         {
-            FrmAgregarGoma goma = new FrmAgregarGoma();
+            FrmAgregarGoma goma = new FrmAgregarGoma(cartuchera);
             goma.ShowDialog();
         }
 
         private void FrmCartuchera_Load(object sender, EventArgs e)
         {
+           
 
-            cartuchera.ListaDeElementos = LapizDAO.LeerListaLapiz();
+            cartuchera.ListaDeElementos = LlenarCartuchera();        
         }
        
       
@@ -41,6 +42,28 @@ namespace Vista
         {
             FrmVerUtiles utiles = new FrmVerUtiles(cartuchera);
             utiles.ShowDialog();
+        }
+        public List<Utiles> LlenarCartuchera()
+        {
+            List<Utiles> utiles = new List<Utiles>();
+            foreach (SacaPuntas item in SacaPuntasDAO.LeerListaSacaPuntas())
+            {
+                utiles.Add(item);
+            }
+            foreach (Lapiz item in LapizDAO.LeerListaLapiz())
+            {
+                utiles.Add(item);
+            }
+            foreach (Goma item in GomaDao.LeerListaDeGomas())
+            {
+                utiles.Add(item);
+            }
+            return utiles;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show(cartuchera.ToString(),"Ticket Cartuchera");
         }
     }
 }

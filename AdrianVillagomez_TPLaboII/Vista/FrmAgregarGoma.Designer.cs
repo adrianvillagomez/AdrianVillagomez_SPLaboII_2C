@@ -32,8 +32,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +56,7 @@
             this.btnAceptar.TabIndex = 27;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // pictureBox1
             // 
@@ -67,19 +68,19 @@
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox2
+            // txtPrecio
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 187);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 23);
-            this.textBox2.TabIndex = 24;
+            this.txtPrecio.Location = new System.Drawing.Point(109, 187);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(121, 23);
+            this.txtPrecio.TabIndex = 24;
             // 
-            // textBox1
+            // txtMarca
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 147);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
-            this.textBox1.TabIndex = 23;
+            this.txtMarca.Location = new System.Drawing.Point(109, 147);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(121, 23);
+            this.txtMarca.TabIndex = 23;
             // 
             // label3
             // 
@@ -108,8 +109,8 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -128,8 +129,8 @@
         private Button btnCancelar;
         private Button btnAceptar;
         private PictureBox pictureBox1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtPrecio;
+        private TextBox txtMarca;
         private Label label3;
         private Label label1;
     }

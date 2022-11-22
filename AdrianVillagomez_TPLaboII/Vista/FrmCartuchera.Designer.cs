@@ -34,7 +34,7 @@
             this.btnAgregarGoma = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnVerUtiles = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLeerTickets = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAgregarUtil
@@ -97,16 +97,17 @@
             this.btnVerUtiles.UseVisualStyleBackColor = false;
             this.btnVerUtiles.Click += new System.EventHandler(this.btnVerUtiles_Click);
             // 
-            // button1
+            // btnLeerTickets
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(600, 441);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 43);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Leer Tickets";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLeerTickets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLeerTickets.ForeColor = System.Drawing.Color.White;
+            this.btnLeerTickets.Location = new System.Drawing.Point(600, 441);
+            this.btnLeerTickets.Name = "btnLeerTickets";
+            this.btnLeerTickets.Size = new System.Drawing.Size(143, 43);
+            this.btnLeerTickets.TabIndex = 5;
+            this.btnLeerTickets.Text = "Leer Tickets";
+            this.btnLeerTickets.UseVisualStyleBackColor = false;
+            this.btnLeerTickets.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // FrmCartuchera
             // 
@@ -115,7 +116,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(772, 549);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLeerTickets);
             this.Controls.Add(this.btnVerUtiles);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregarGoma);
@@ -138,6 +139,6 @@
         private Button btnAgregarGoma;
         private Label label1;
         private Button btnVerUtiles;
-        private Button button1;
+        private Button btnLeerTickets;
     }
 }

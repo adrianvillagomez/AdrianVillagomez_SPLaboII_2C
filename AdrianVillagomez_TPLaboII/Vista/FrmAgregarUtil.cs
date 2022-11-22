@@ -43,7 +43,7 @@ namespace Vista
                 {
                     _ = cartuchera + lapiz;
                     LapizDAO.Alta(lapiz);
-
+                    
                 }
                 catch (CartucheraLlenaException ex)
                 {

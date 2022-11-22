@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgregarSacaPunta));
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMaterial = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox2
+            // txtPrecio
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 170);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 23);
-            this.textBox2.TabIndex = 14;
+            this.txtPrecio.Location = new System.Drawing.Point(120, 170);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(121, 23);
+            this.txtPrecio.TabIndex = 14;
             // 
-            // textBox1
+            // txtMarca
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
-            this.textBox1.TabIndex = 13;
+            this.txtMarca.Location = new System.Drawing.Point(120, 130);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(121, 23);
+            this.txtMarca.TabIndex = 13;
             // 
             // label3
             // 
@@ -92,12 +92,12 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox3
+            // txtMaterial
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 216);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 23);
-            this.textBox3.TabIndex = 17;
+            this.txtMaterial.Location = new System.Drawing.Point(120, 216);
+            this.txtMaterial.Name = "txtMaterial";
+            this.txtMaterial.Size = new System.Drawing.Size(121, 23);
+            this.txtMaterial.TabIndex = 17;
             // 
             // btnCancelar
             // 
@@ -107,6 +107,7 @@
             this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -116,6 +117,7 @@
             this.btnAceptar.TabIndex = 18;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // FrmAgregarSacaPunta
             // 
@@ -125,10 +127,10 @@
             this.ClientSize = new System.Drawing.Size(269, 357);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtMaterial);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -144,13 +146,13 @@
         }
 
         #endregion
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtPrecio;
+        private TextBox txtMarca;
         private Label label3;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
-        private TextBox textBox3;
+        private TextBox txtMaterial;
         private Button btnCancelar;
         private Button btnAceptar;
     }
