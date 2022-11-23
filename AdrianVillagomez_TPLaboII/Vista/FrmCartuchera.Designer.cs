@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnVerUtiles = new System.Windows.Forms.Button();
             this.btnLeerTickets = new System.Windows.Forms.Button();
+            this.LabelHora = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAgregarUtil
@@ -109,6 +110,16 @@
             this.btnLeerTickets.UseVisualStyleBackColor = false;
             this.btnLeerTickets.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // LabelHora
+            // 
+            this.LabelHora.AutoSize = true;
+            this.LabelHora.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.LabelHora.Location = new System.Drawing.Point(582, 45);
+            this.LabelHora.Name = "LabelHora";
+            this.LabelHora.Size = new System.Drawing.Size(45, 17);
+            this.LabelHora.TabIndex = 6;
+            this.LabelHora.Text = "label2";
+            // 
             // FrmCartuchera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -116,6 +127,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(772, 549);
+            this.Controls.Add(this.LabelHora);
             this.Controls.Add(this.btnLeerTickets);
             this.Controls.Add(this.btnVerUtiles);
             this.Controls.Add(this.label1);
@@ -140,5 +152,6 @@
         private Label label1;
         private Button btnVerUtiles;
         private Button btnLeerTickets;
+        private Label LabelHora;
     }
 }

@@ -59,20 +59,18 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Capacidad de la Cartuchera: {this.capacidadCartuchera}");
             sb.AppendLine($"Utiles en la cartuchera: {this.listaDeElementos.Count}");
+            sb.AppendLine($"Lista de Utiles :");
+            sb.AppendLine($"**************************************");
+            sb.AppendLine();
             foreach (T item in listaDeElementos)
             {
-                sb.AppendLine($"Tipo: {item.GetType().Name}");
-                if (item is Lapiz)
-                {
-                    Lapiz lapiz = item as Lapiz;
-                    //sb.AppendLine($"Color: {lapiz.Color}");
-                }
+                sb.AppendLine($"Tipo: {item.GetType().Name}");            
+                sb.AppendLine($"{item.ToString()}");
                 if (item is SacaPuntas)
                 {
                     SacaPuntas sacapuntas = item as SacaPuntas;
                     sb.AppendLine($"Material: {sacapuntas.Material}");
                 }
-                sb.AppendLine($"{item.ToString()}");
             }
             return sb.ToString();
         }

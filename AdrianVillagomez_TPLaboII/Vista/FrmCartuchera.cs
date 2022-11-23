@@ -7,10 +7,12 @@ namespace Vista
     public partial class FrmCartuchera : Form
     {
         Cartuchera<Utiles> cartuchera;
+
         public FrmCartuchera()
         {
             InitializeComponent();
-            cartuchera = new Cartuchera<Utiles>(3,new List<Utiles>() );
+            cartuchera = new Cartuchera<Utiles>(3, new List<Utiles>());
+
         }
 
         private void btnAgregarUtil_Click(object sender, EventArgs e)
@@ -32,12 +34,15 @@ namespace Vista
         }
 
         private void FrmCartuchera_Load(object sender, EventArgs e)
-        {          
+        {
             cartuchera.ListaDeElementos = LlenarCartuchera();
             cartuchera.EventoPrecio += ImprimirEnTicket;
+
+            Task.Run(() => GuardarDatos());
+            Task.Run(() => AsiganarHora());
         }
-       
-      
+
+
         private void btnVerUtiles_Click(object sender, EventArgs e)
         {
             FrmVerUtiles utiles = new FrmVerUtiles(cartuchera);
@@ -64,13 +69,39 @@ namespace Vista
         private void button1_Click_1(object sender, EventArgs e)
         {
             cartuchera.ListaDeElementos = LlenarCartuchera();
-            MessageBox.Show(cartuchera.ToString(),"Ticket Cartuchera");
+            MessageBox.Show(cartuchera.ToString(), "Ticket Cartuchera");
         }
         public void ImprimirEnTicket()
         {
-            Log log= new Log();
+            Log log = new Log();
             log.Escribir(cartuchera.ToString());
             MessageBox.Show("Se disparo el evento");
         }
+        public void GuardarDatos()
+        {
+            while (true)
+            {
+                LogBackUp.Escribir($"{cartuchera.ToString()}{DateTime.Now}\n");
+                Thread.Sleep(10000);
+            }
+        }
+        public void AsiganarHora()
+        {
+            while (true)
+            {
+                if (InvokeRequired)
+                {
+                    Action action = () => LabelHora.Text = DateTime.Now.ToString();
+                    Invoke(action);
+                }
+                else
+                {
+
+                    LabelHora.Text = DateTime.Now.ToString();
+                }
+            }
+        }
+
+
     }
 }
