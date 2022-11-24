@@ -5,25 +5,6 @@
  ## Autor
   * [Adrian Villagomez](https://github.com/adrianvillagomez)
 
- ## Lecciones Aprendidas
-
-+ Clases y métodos estáticos
-+ OOP
-+ Sobrecarga
-+ WindowsForms
-+ Colecciones
-+ Enumerados
-+ Encapsulamiento
-+ Herencia
-+ Polimorfismo
-+ Unit Test
-+ Excepciones
-+ Tipos Genéricos
-+ Interfaces
-+ Conexión a bases de datos (SQLServer)
-+ Programación MultiHilo y concurrencia
-+ Eventos
-
 
 # Menu Principal
 
@@ -58,3 +39,22 @@ En este apartado y junto con el reloj aplicamos Programación multihilos
 * Tanto los DataGridView de Sacapuntas y Goma tendrán el evento doble click donde se podrá modificar o eliminar el elemento seleccionado.
 
 ![Imagen](/ImagenesReadme/Opciones.png)
+
+## Lecciones Aprendidas
+
++ Clases y métodos estáticos
++ OOP
++ Sobrecarga
++ WindowsForms
++ Colecciones
++ Enumerados
++ Encapsulamiento
++ Herencia
++ Polimorfismo
++ Unit Test
++ Excepciones
++ Tipos Genéricos
++ Interfaces
++ Conexión a bases de datos (SQLServer)
++ Programación MultiHilo y concurrencia
++ Eventos
