@@ -31,3 +31,4 @@ F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\bin\Debug\net6.0-windows\runtim
 F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.FrmVerUtiles.resources
 F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.FrmSerializar.resources
 F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.FrmBuckup.resources
+F:\TPLaboIIFinal\AdrianVillagomez_TPLaboII\Vista\obj\Debug\net6.0-windows\Vista.FrmBajaModificar.resources

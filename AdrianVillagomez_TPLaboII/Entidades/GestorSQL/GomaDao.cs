@@ -65,6 +65,45 @@ namespace Entidades.GestorSQL
             }
             return gomas;
         }
+        public static void Eliminar(int id)
+        {
+            try
+            {
+                string query = "delete from Goma where id = @id";
+                using (SqlConnection connection = new SqlConnection(cadenaConexion))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("id", id);
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
 
+                throw new Exception("Error al dar de baja", ex);
+            }
+        }
+        public static void Actualizar(Goma goma, int id)
+        {
+            string query = "update Goma set marca=@marca, precio=@precio where id = @id";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cadenaConexion))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("id", id);
+                    cmd.Parameters.AddWithValue("marca", goma.Marca);
+                    cmd.Parameters.AddWithValue("precio", goma.Precio);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Erro al intentar actualizar");
+            }
+        }
     }
 }

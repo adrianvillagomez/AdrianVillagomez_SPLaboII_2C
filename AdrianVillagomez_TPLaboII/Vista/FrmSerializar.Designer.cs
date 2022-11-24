@@ -52,7 +52,7 @@
             this.btnSerializarXML.Name = "btnSerializarXML";
             this.btnSerializarXML.Size = new System.Drawing.Size(122, 23);
             this.btnSerializarXML.TabIndex = 1;
-            this.btnSerializarXML.Text = "SerializarML";
+            this.btnSerializarXML.Text = "SerializarXML";
             this.btnSerializarXML.UseVisualStyleBackColor = true;
             this.btnSerializarXML.Click += new System.EventHandler(this.btnSerializarXML_Click);
             // 

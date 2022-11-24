@@ -31,7 +31,7 @@ namespace Entidades.GestorSQL
 
                     string marca = reader.GetString(1);
                     int precio = reader.GetInt32(2);
-                    string material =reader.GetString(3);
+                    string material = reader.GetString(3);
                     sacapuntas = new SacaPuntas(marca, precio, material);
                     sacapuntas.Id = id;
                 }
@@ -109,6 +109,30 @@ namespace Entidades.GestorSQL
                 throw new Exception("Error Al Leer Lista", ex);
             }
             return SacaPuntas;
+        }
+        public static void Actualizar(SacaPuntas sacapuntas, int id)
+        {
+
+
+            string query = "update Sacapuntas set marca=@marca, precio=@precio, material=@material where id = @id";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cadenaConexion))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("id", id);
+                    cmd.Parameters.AddWithValue("marca", sacapuntas.Marca);
+                    cmd.Parameters.AddWithValue("precio", sacapuntas.Precio);
+                    cmd.Parameters.AddWithValue("material", sacapuntas.Material);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Erro al intentar actualizar");
+            }
         }
     }
 }

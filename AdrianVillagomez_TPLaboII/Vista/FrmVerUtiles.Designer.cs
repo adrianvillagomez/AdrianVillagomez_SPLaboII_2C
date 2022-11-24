@@ -48,9 +48,9 @@
             this.label1.ForeColor = System.Drawing.Color.Brown;
             this.label1.Location = new System.Drawing.Point(31, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 21);
+            this.label1.Size = new System.Drawing.Size(97, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "SacaPuntaz";
+            this.label1.Text = "SacaPuntas";
             // 
             // label2
             // 
@@ -94,6 +94,7 @@
             this.dtvSacapuntaz.RowTemplate.Height = 25;
             this.dtvSacapuntaz.Size = new System.Drawing.Size(425, 150);
             this.dtvSacapuntaz.TabIndex = 8;
+            this.dtvSacapuntaz.DoubleClick += new System.EventHandler(this.dtvSacapuntaz_DoubleClick);
             // 
             // dtvGoma
             // 
@@ -104,6 +105,7 @@
             this.dtvGoma.RowTemplate.Height = 25;
             this.dtvGoma.Size = new System.Drawing.Size(355, 150);
             this.dtvGoma.TabIndex = 9;
+            this.dtvGoma.DoubleClick += new System.EventHandler(this.dtvGoma_DoubleClick);
             // 
             // btnDeserializar
             // 
@@ -129,6 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(860, 482);
             this.Controls.Add(this.btnDeserializarXml);
             this.Controls.Add(this.btnDeserializar);
@@ -138,8 +141,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmVerUtiles";
-            this.Text = "FrmVerUtiles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Utiles";
             this.Load += new System.EventHandler(this.FrmVerUtiles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtvLapices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvSacapuntaz)).EndInit();

@@ -130,5 +130,35 @@ namespace Vista
                 MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void dtvSacapuntaz_DoubleClick(object sender, EventArgs e)
+        {
+            SacaPuntas sacapunta = dtvSacapuntaz.CurrentCell.Value as SacaPuntas;
+            string material = dtvSacapuntaz.CurrentRow.Cells[0].Value.ToString();            
+            string marca = dtvSacapuntaz.CurrentRow.Cells[1].Value.ToString();
+            string precio = dtvSacapuntaz.CurrentRow.Cells[2].Value.ToString();
+            string id = dtvSacapuntaz.CurrentRow.Cells[3].Value.ToString();
+            int.TryParse(id, out int idInt);
+            int.TryParse(precio, out int precioInt);
+            sacapunta = new SacaPuntas(marca, precioInt, material);
+            sacapunta.Id = idInt;
+            FrmBajaModificar frmBajaModificar = new FrmBajaModificar(sacapunta, cartuchera);
+            frmBajaModificar.ShowDialog();
+            RefrescarDtvSacaPuntas();
+        }    
+        private void dtvGoma_DoubleClick(object sender, EventArgs e)
+        {
+            Goma goma = dtvGoma.CurrentCell.Value as Goma;
+            string marca = dtvGoma.CurrentRow.Cells[0].Value.ToString();
+            string precio = dtvGoma.CurrentRow.Cells[1].Value.ToString();
+            string id = dtvGoma.CurrentRow.Cells[2].Value.ToString();
+            int.TryParse(id, out int idInt);
+            int.TryParse(precio, out int precioInt);
+            goma = new Goma(marca, precioInt);
+            goma.Id = idInt;
+            FrmBajaModificar frmBajaModificar = new FrmBajaModificar(goma, cartuchera);
+            frmBajaModificar.ShowDialog();
+            RefrescarDtvUtilesGoma();
+        }
     }
 }
