@@ -36,6 +36,7 @@
             this.btnVerUtiles = new System.Windows.Forms.Button();
             this.btnLeerTickets = new System.Windows.Forms.Button();
             this.LabelHora = new System.Windows.Forms.Label();
+            this.btnbuckup = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAgregarUtil
@@ -88,7 +89,7 @@
             // 
             // btnVerUtiles
             // 
-            this.btnVerUtiles.BackColor = System.Drawing.Color.Blue;
+            this.btnVerUtiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnVerUtiles.ForeColor = System.Drawing.Color.White;
             this.btnVerUtiles.Location = new System.Drawing.Point(31, 358);
             this.btnVerUtiles.Name = "btnVerUtiles";
@@ -120,6 +121,18 @@
             this.LabelHora.TabIndex = 6;
             this.LabelHora.Text = "label2";
             // 
+            // btnbuckup
+            // 
+            this.btnbuckup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnbuckup.ForeColor = System.Drawing.Color.White;
+            this.btnbuckup.Location = new System.Drawing.Point(600, 78);
+            this.btnbuckup.Name = "btnbuckup";
+            this.btnbuckup.Size = new System.Drawing.Size(143, 43);
+            this.btnbuckup.TabIndex = 7;
+            this.btnbuckup.Text = "Lista Buckup";
+            this.btnbuckup.UseVisualStyleBackColor = false;
+            this.btnbuckup.Click += new System.EventHandler(this.btnbuckup_Click);
+            // 
             // FrmCartuchera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -127,6 +140,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(772, 549);
+            this.Controls.Add(this.btnbuckup);
             this.Controls.Add(this.LabelHora);
             this.Controls.Add(this.btnLeerTickets);
             this.Controls.Add(this.btnVerUtiles);
@@ -153,5 +167,6 @@
         private Button btnVerUtiles;
         private Button btnLeerTickets;
         private Label LabelHora;
+        private Button btnbuckup;
     }
 }

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{7D00B8F4-E546-443A-8D2F-96556375AB91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vista", "Vista\Vista.csproj", "{EFF30C19-8421-4FFF-B4D6-1760AD6A1746}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vista", "Vista\Vista.csproj", "{EFF30C19-8421-4FFF-B4D6-1760AD6A1746}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

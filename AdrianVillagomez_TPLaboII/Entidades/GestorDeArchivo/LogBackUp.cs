@@ -28,5 +28,20 @@ namespace Entidades.GestorDeArchivo
                 throw new Exception("Error al escribir el archivo", ex);
             }
         }
+        public static string Leer()
+        {
+            try
+            {
+                using (StreamReader streamReader = new StreamReader(ruta))
+                {
+                    return streamReader.ReadToEnd();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al leer", ex);
+            }
+
+        }
     }
 }

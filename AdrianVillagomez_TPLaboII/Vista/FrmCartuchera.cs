@@ -102,6 +102,10 @@ namespace Vista
             }
         }
 
-
+        private void btnbuckup_Click(object sender, EventArgs e)
+        {
+           FrmBuckup buckup = new FrmBuckup();
+           buckup.ShowDialog();
+        }
     }
 }
